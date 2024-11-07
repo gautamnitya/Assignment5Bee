@@ -1,0 +1,19 @@
+
+show dbs
+use school
+db.createCollection("student")
+db.student.insertMany([{"name":"nityaage":"20"grade":"B"},{"name":"nishtha:"20"grade":"A"},{"name":"anureet:"19","grade":"O"}])
+db.student.find()
+db.student.find({age:{$gt:"19}})
+db.student.find({age:{$gt:"19, $lt:"23"}})
+db.student.insertOne({"name":"joy,"age":"21","grade":"C"})
+db.student.updateOne({"name":"joy},{$set:{"grade":"A"}})
+db.student.insertOne({"name":"ema,"age":"20","grade":"D"})
+db.student.find()
+db.student.deleteOne({ name:"ema})
+db.student.countDocuments({grade: "A"})
+db.student.find( {} , {name: 1, grade: 1, _id:0})
+db.student.find().sort({age: -1})
+
+
+
